@@ -1,2 +1,3 @@
 # WEB-CVE
-http/https CVE
+
+WEB(http) CVE Collection
