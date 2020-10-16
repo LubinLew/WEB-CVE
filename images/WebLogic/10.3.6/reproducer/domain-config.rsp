@@ -1,0 +1,23 @@
+/////////////////////////////////////////////////////////////////////////////////////////////
+//   https://docs.oracle.com/cd/E13179_01/common/docs91/silent_cw/silent.html#1057069   /////
+/////////////////////////////////////////////////////////////////////////////////////////////
+
+read template from "/weblogic/wlserver/common/templates/domains/wls.jar";
+set ServerStartMode "prod";
+set JavaHome "/usr/local/jdk";
+
+
+find Server "AdminServer" as AdminServer;
+set AdminServer.ListenAddress "";
+set AdminServer.ListenPort "7001";
+set AdminServer.SSL.Enabled "false";
+
+
+find User "weblogic" as u1;
+set u1.password "weblogic123";
+
+set OverwriteDomain "true";
+
+write domain to "/weblogic/user_projects/domains/weblogic";
+
+close template;
