@@ -22,9 +22,9 @@ tcp-port : `7001`
 
 **url**: `http://<IP>:7001/console`
 
-**username **: `weblogic`
+username: `weblogic`
 
-**password **: `weblogic123`
+password: `weblogic123`
 
 
 

@@ -2,11 +2,8 @@ FROM centos:7.8.2003
 
 MAINTAINER lubinlew "https://github.com/LubinLew"
 
-## expect
-RUN  yum install -y expect
-RUN  yum clean all
 
-## JDK-8u261(https://download.oracle.com/otn/java/jdk/8u261-b12/a4634525489241b9a9e1aa73d9e118e6/jdk-8u261-linux-x64.tar.gz)
+## JDK-8u261
 ADD  reproducer/jdk-8u261-linux-x64.tar.gz /usr/local/
 RUN  mv /usr/local/jdk1.8.0_261  usr/local/jdk
 ENV  JAVA_HOME=/usr/local/jdk
@@ -15,7 +12,7 @@ ENV  CLASSPATH=.:$JAVA_HOME/lib/dt.jar:$JAVA_HOME/lib/tools.jar:$JRE_HOME/lib
 ENV  PATH=$PATH:$JAVA_HOME/bin
 
 
-## WebLogic-10.3.6(https://download.oracle.com/otn/nt/middleware/11g/wls/1036/wls1036_generic.jar)
+## WebLogic-10.3.6
 RUN  mkdir /weblogic
 COPY reproducer/wls1036_generic.jar    /weblogic/
 COPY reproducer/silent.xml             /weblogic/
