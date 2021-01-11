@@ -1,4 +1,4 @@
-# WEB-CVE Environment Collection
+# WEB-CVE Collection
 
 | CVE-ID         | Description                      | Type | Link                                  | Status |
 | -------------- | -------------------------------- | ---- | ------------------------------------- | ------ |
